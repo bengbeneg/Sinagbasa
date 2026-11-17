@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "SINAGBASA/dist",
+  "installCommand": "npm install",
+  "framework": null,
+  "functions": {
+    "api/assessments.js": {
+      "includeFiles": "SINAGBASA/dist/supabase-config.js"
+    }
+  },
+  "headers": [
+    { "source": "/", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/assessments.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/assessment-content.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}

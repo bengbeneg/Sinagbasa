@@ -1,0 +1,8 @@
+scripts/
+.codex-tmp/
+.private-backup-location
+.public-cleanup-state
+.env*
+.git/
+SINAGBASA/dist/dist/
+.build-check/

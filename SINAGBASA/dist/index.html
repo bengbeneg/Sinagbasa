@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("sinagbasa-theme");
+        document.documentElement.dataset.theme = savedTheme === "dark" ? "dark" : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <title>SINAGBASA | Learn, play, grow</title>
+    <meta
+      name="description"
+      content="Build reading comprehension through English and Filipino lessons, community dispatch games, and personal progress."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3" />
+    <link rel="shortcut icon" href="favicon.svg?v=3" />
+    <link rel="stylesheet" href="style.css?v=12" />
+    <link rel="stylesheet" href="assessment-theme.css?v=6" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" async></script>
+    <script src="supabase-config.js?v=2" defer></script>
+    <script src="data.js" defer></script>
+    <script src="arcade-data.js" defer></script>
+    <script src="expansion-data.js" defer></script>
+    <script src="lesson-content.js" defer></script>
+    <script src="story-data.js?v=6" defer></script>
+    <script src="app.js?v=4" defer></script>
+    <script src="arcade.js" defer></script>
+    <script src="expansion.js" defer></script>
+    <script src="story.js?v=6" defer></script>
+    <script src="rabbit-bash.js" defer></script>
+    <script src="cloud-sync.js?v=2" defer></script>
+    <script src="content-library.js?v=3" defer></script>
+    <script src="auth.js?v=10" defer></script>
+    <script src="assessment-content.js?v=4" defer></script>
+    <script src="assessments.js?v=19" defer></script>
+    <script src="activity-presence.js?v=2" defer></script>
+    <script src="activity-analytics.js?v=15" defer></script>
+    <script src="sidebar.js" defer></script>
+  </head>
+  <body class="auth-pending">
+    <a class="skip" href="#main">Skip to content</a>
+    <button class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false">
+      <span><b>✺</b> SINAG<span class="thin">BASA</span></span><i aria-hidden="true">☰</i>
+    </button>
+    <header id="sidebar">
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">×</button>
+      <button class="brand" id="sidebarBrand" aria-label="Collapse sidebar" aria-expanded="true" title="Collapse sidebar"
+        ><span class="sun">✺</span
+        ><span
+          >SINAG<span class="thin">BASA</span
+          ><small>LEARN · PLAY · GROW</small></span
+        ></button>
+      <nav aria-label="Main navigation" id="nav"></nav>
+      <div class="sidebar-quick-controls" aria-label="Display and language controls">
+        <button
+          class="language"
+          id="language"
+          aria-label="Change language"
+        ></button>
+        <button class="theme-toggle" id="themeToggle" type="button"></button>
+      </div>
+    </header>
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+    <main id="main" tabindex="-1"></main>
+    <footer>
+      <a href="#home" class="footer-brand">✺ SINAGBASA</a
+      ><span id="footerText"></span><span id="storageText"></span>
+    </footer>
+    <script>
+      if (!["localhost", "127.0.0.1", "::1"].includes(window.location.hostname)) {
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        const analytics = document.createElement("script");
+        analytics.defer = true;
+        analytics.src = "/_vercel/insights/script.js";
+        document.head.appendChild(analytics);
+      }
+    </script>
+  </body>
+</html>

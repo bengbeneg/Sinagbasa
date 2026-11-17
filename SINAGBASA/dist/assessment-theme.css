@@ -1,0 +1,125 @@
+/* Assessments and teacher reports follow the shared SINAGBASA route design system. */
+body[data-page="exams"]{--page-accent:#7662b7;--page-pop:#f2b632;--page-soft:#eee9fa}
+body[data-page="class-results"]{--page-accent:#315f80;--page-pop:#68b7b5;--page-soft:#e6f0f5}
+body[data-page="activity-logs"]{--page-accent:#288e93;--page-pop:#f2b632;--page-soft:#dcf2f1}
+
+.exam-page,.exam-active,.teacher-report{color:#173449}
+.exam-heading{position:relative;overflow:hidden;border-top:5px solid var(--page-accent);background:radial-gradient(circle at 92% 10%,color-mix(in srgb,var(--page-pop) 22%,transparent) 0 72px,transparent 74px),radial-gradient(circle at 5% 100%,color-mix(in srgb,var(--page-accent) 14%,transparent) 0 94px,transparent 96px),linear-gradient(135deg,#fffdf8,var(--page-soft));box-shadow:0 18px 42px #173b3017}
+.exam-heading::after{content:"";position:absolute;right:-34px;bottom:-54px;width:150px;height:150px;border:18px solid color-mix(in srgb,var(--page-accent) 16%,transparent);border-radius:50%;pointer-events:none}
+.exam-heading>*{position:relative;z-index:1}
+.assessment-heading-icon{display:grid;width:50px;height:50px;margin-bottom:18px;place-items:center;border:1px solid color-mix(in srgb,var(--page-accent) 35%,white);border-radius:14px;background:color-mix(in srgb,var(--page-accent) 13%,white);color:var(--page-accent);font-size:27px;font-weight:900;box-shadow:0 8px 18px #173b3012}
+.exam-heading .eyebrow{color:var(--page-accent)}
+.exam-heading h1{color:#102f4a}
+.exam-heading>p:last-child{color:#526c73}
+
+.exam-card{overflow:hidden;border-color:#d6d4cf;border-radius:18px;background:linear-gradient(145deg,#fff 65%,color-mix(in srgb,var(--page-soft) 70%,white));color:#173449}
+.exam-card:nth-child(1){border-top:4px solid #73a9ca}.exam-card:nth-child(2){border-top:4px solid #e85a72}
+.exam-card::before{background:var(--page-pop)}
+.exam-card h2{color:#153a55}.exam-card>p{color:#60747a}.exam-card>small{color:#9a413b}.exam-score{color:#287b75}
+.exam-language button{border-color:#789cac;background:#edf5f8;color:#173f58;box-shadow:0 5px 14px #173b300c}
+.exam-language button:hover:not(:disabled),.exam-language button:focus-visible{border-color:#315f80;background:#dfeef5;outline:3px solid #73a9ca55}
+.exam-language button:disabled{background:#eef0ef;color:#78847f;opacity:.7}
+#examStatus:not(:empty){margin-top:18px;padding:14px 16px;border:1px solid #e1b65d;border-radius:12px;background:#fff7df;color:#714f08;font-weight:800}
+
+.exam-active-heading{border:1px solid #476d88;background:radial-gradient(circle at 90% 10%,#73a9ca2e 0 72px,transparent 74px),linear-gradient(135deg,#102f4a,#1c4b6a);box-shadow:0 14px 34px #102f4a2b}
+.exam-warning{box-shadow:0 6px 16px #7b2f2010}
+.exam-active fieldset{border-color:#d3dcd8;border-radius:16px;box-shadow:0 7px 20px #173b3009}
+.exam-active fieldset label{transition:background .15s,border-color .15s}.exam-active fieldset label:has(input:checked){background:#e7f1f6;color:#153a55;font-weight:800}
+.exam-active input[type="radio"]{accent-color:#315f80}
+
+.report-tools{border-color:#d4dddf;border-radius:16px;background:#fff;box-shadow:0 8px 22px #173b300b}
+.report-tools label{display:grid;gap:7px}.report-tools label>span{color:#385268;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.report-tools input,.report-tools select{min-height:48px;border-color:#aebdc2;background:#fbfdfd;color:#173449}
+.report-tools input:focus,.report-tools select:focus{border-color:var(--page-accent);outline:3px solid color-mix(in srgb,var(--page-accent) 24%,transparent)}
+.results-filter-tools{display:grid;grid-template-columns:minmax(240px,1fr) minmax(180px,.45fr);align-items:end}
+.report-summary{color:#526c73}
+.report-table{border-color:#ccd9dd;background:#fff;box-shadow:0 12px 30px #173b3010}
+.report-table th{background:linear-gradient(135deg,#143b52,#245b72);color:#fff}
+.report-table td{color:#29485b}.report-table tbody tr:nth-child(even){background:#f4f8f9}.report-table tbody tr:hover{background:#fff5dc}
+
+.analytics-heading h2,.analytics-kpis strong,.analytics-card h3,.chart-legend strong,.page-bars span,.active-users strong{color:#153a55}
+.analytics-heading p:not(.eyebrow),.chart-legend span,.chart-note,.analytics-empty,.active-users small{color:#60747a}
+.analytics-scope{border:1px solid #c8dce2;background:#e8f3f6;color:#17455e}
+.analytics-kpis article,.analytics-card{border-color:#d2dcdf;background:#fff}.analytics-kpis article{background:linear-gradient(150deg,#fff,#f8fbfb)}
+.timeline-chart{border-color:#cbd8dd}.bar-track{background:#e4ecef}.active-users div{background:#f0f6f7}
+.heatmap-legend{border-color:#d2dfe2;background:#f7fafb}.heat-row i,.heatmap-legend i{border-color:#cfdbdf}
+
+header#sidebar nav a[href="#exams"] .side-icon{color:#7662b7}
+header#sidebar nav a[href="#class-results"] .side-icon{color:#315f80}
+header#sidebar nav a[href="#activity-logs"] .side-icon{color:#288e93}
+header#sidebar nav a:is([href="#exams"],[href="#class-results"],[href="#activity-logs"])[aria-current] .side-icon{color:var(--page-accent)}
+
+html[data-theme="dark"] body[data-page="exams"],html[data-theme="dark"] body[data-page="class-results"],html[data-theme="dark"] body[data-page="activity-logs"]{background:#0d1715;color:#e5eee9}
+html[data-theme="dark"] .exam-page,html[data-theme="dark"] .exam-active,html[data-theme="dark"] .teacher-report{color:#e5eee9}
+html[data-theme="dark"] .exam-heading{border-color:color-mix(in srgb,var(--page-accent) 75%,#fff);background:radial-gradient(circle at 92% 10%,color-mix(in srgb,var(--page-pop) 16%,transparent) 0 72px,transparent 74px),radial-gradient(circle at 5% 100%,color-mix(in srgb,var(--page-accent) 18%,transparent) 0 94px,transparent 96px),linear-gradient(135deg,#172c3c,#101d27);box-shadow:0 18px 42px #0008}
+html[data-theme="dark"] .assessment-heading-icon{border-color:color-mix(in srgb,var(--page-accent) 55%,#40505a);background:color-mix(in srgb,var(--page-accent) 24%,#17272f);color:#fff;box-shadow:none}
+html[data-theme="dark"] .exam-heading h1,html[data-theme="dark"] .analytics-heading h2,html[data-theme="dark"] .analytics-kpis strong,html[data-theme="dark"] .analytics-card h3,html[data-theme="dark"] .chart-legend strong,html[data-theme="dark"] .page-bars span,html[data-theme="dark"] .active-users strong{color:#edf6f8}
+html[data-theme="dark"] .exam-heading>p:last-child,html[data-theme="dark"] .analytics-heading p:not(.eyebrow),html[data-theme="dark"] .chart-legend span,html[data-theme="dark"] .chart-note,html[data-theme="dark"] .analytics-empty,html[data-theme="dark"] .active-users small,html[data-theme="dark"] .report-summary{color:#abc0c8}
+html[data-theme="dark"] .exam-card,html[data-theme="dark"] .exam-active fieldset,html[data-theme="dark"] .report-tools,html[data-theme="dark"] .report-table,html[data-theme="dark"] .analytics-kpis article,html[data-theme="dark"] .analytics-card{border-color:#38515d;background:#17272f;color:#e5eee9;box-shadow:0 12px 30px #0005}
+html[data-theme="dark"] .exam-card{background:linear-gradient(145deg,#17272f,#1c3038)}
+html[data-theme="dark"] .exam-card h2,html[data-theme="dark"] .exam-active legend{color:#edf6f8}
+html[data-theme="dark"] .exam-card>p{color:#abc0c8}html[data-theme="dark"] .exam-card>small{color:#f0a69b}html[data-theme="dark"] .exam-score{color:#79cfcb}
+html[data-theme="dark"] .exam-language button{border-color:#4a6876;background:#203842;color:#eaf5f7}html[data-theme="dark"] .exam-language button:hover:not(:disabled),html[data-theme="dark"] .exam-language button:focus-visible{border-color:#8cc4e5;background:#294957}html[data-theme="dark"] .exam-language button:disabled{background:#1b292d;color:#7f9499}
+html[data-theme="dark"] #examStatus:not(:empty){border-color:#816d39;background:#302b1d;color:#f2d686}
+html[data-theme="dark"] .exam-warning{border-color:#784940;border-left-color:#ef7668;background:#36231f;color:#ffc5bc}
+html[data-theme="dark"] .exam-active fieldset label:hover,html[data-theme="dark"] .exam-active fieldset label:has(input:checked){background:#243b45;color:#f1f8fa}
+html[data-theme="dark"] .report-tools label>span{color:#abc0c8}
+html[data-theme="dark"] .report-tools input,html[data-theme="dark"] .report-tools select{border-color:#49626d!important;background:#101e24!important;color:#edf5f6!important;color-scheme:dark}
+html[data-theme="dark"] .report-table th{background:linear-gradient(135deg,#193b50,#28566c)}
+html[data-theme="dark"] .report-table td{border-color:#314750;color:#dce9ed}html[data-theme="dark"] .report-table tbody tr:nth-child(even){background:#1b2d34}html[data-theme="dark"] .report-table tbody tr:hover{background:#303327}
+html[data-theme="dark"] .analytics-scope{border-color:#3d5964;background:#203842;color:#bfe2ed}
+html[data-theme="dark"] .donut::after{background:#17272f}html[data-theme="dark"] .timeline-chart{border-color:#405660}html[data-theme="dark"] .bar-track{background:#293e47}html[data-theme="dark"] .active-users div,html[data-theme="dark"] .heatmap-legend{border-color:#3c5360;background:#20343d}
+html[data-theme="dark"] .heat-row i,html[data-theme="dark"] .heatmap-legend i{border-color:#405863}
+html[data-theme="dark"] header#sidebar nav a[href="#exams"] .side-icon{color:#b8a8ee}html[data-theme="dark"] header#sidebar nav a[href="#class-results"] .side-icon{color:#8cc4e5}html[data-theme="dark"] header#sidebar nav a[href="#activity-logs"] .side-icon{color:#79cfcb}
+
+@media(max-width:700px){.results-filter-tools{grid-template-columns:1fr}.assessment-heading-icon{width:44px;height:44px}.report-table th,.report-table td{padding:12px 13px}}
+@media(prefers-reduced-motion:reduce){.exam-language button{transition:none}}
+
+.exam-page>h2{margin-top:30px}
+.exam-section-list{padding-left:22px;line-height:1.8}
+.exam-sections,.exam-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.exam-sections button{padding:10px 14px;border:1px solid var(--line,#789cac);border-radius:10px;background:var(--panel,#fff);color:inherit;text-align:left}
+.exam-sections button[aria-current]{background:#1c4b6a;color:white;border-color:#1c4b6a}
+.exam-passage{padding:24px;margin:20px 0;border:1px solid #789cac;border-radius:16px;background:var(--panel,#fff);color:inherit}
+.exam-reading-text{white-space:pre-line;font-size:1.06rem;line-height:1.9;max-width:78ch}
+.exam-clock{position:sticky;top:16px;align-self:flex-start}
+.exam-active-heading{position:sticky;top:0;z-index:5}
+.exam-actions button{min-height:46px}
+#examSaveStatus:not(:empty){padding:12px 0}
+html[data-theme="dark"] .exam-passage,html[data-theme="dark"] .exam-sections button{background:#17272f;border-color:#49626d;color:#edf6f8}
+html[data-theme="dark"] .exam-sections button[aria-current]{background:#28566c}
+@media(max-width:600px){.exam-passage{padding:16px}.exam-active-heading{position:static}.exam-sections{display:grid;grid-template-columns:1fr 1fr}.exam-actions button{flex:1 1 180px}}
+
+.session-filters{display:grid;grid-template-columns:minmax(180px,1fr) minmax(150px,.45fr) auto;align-items:end}
+.session-status-note{color:#60747a;font-size:13px;line-height:1.6;margin:14px 0}
+.session-table td{vertical-align:middle}.session-table td:first-child{max-width:300px;overflow-wrap:anywhere}.session-table td:nth-child(2){white-space:nowrap}
+.session-details-column{text-align:right!important;white-space:nowrap}
+.session-view{display:inline-flex;align-items:center;gap:12px;padding:10px 4px;border:0;background:transparent;color:#21656b;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.session-view span{font-size:23px}.session-view:hover{text-decoration:underline}.session-view:focus-visible{outline:3px solid #73a9ca;border-radius:6px}
+.session-status{display:inline-flex;align-items:center;gap:7px;padding:5px 10px;border-radius:99px;font-size:12px;font-weight:800;white-space:nowrap;background:#eaf0f3;color:#4e6270}
+.session-status i{width:6px;height:6px;border-radius:50%;background:currentColor}.status-active{background:#e4f6ef;color:#176947}.status-idle{background:#fff3d6;color:#805a0d}.status-logged-out{background:#eaf0f8;color:#3d587e}
+.session-pagination{display:flex;align-items:center;flex-wrap:wrap;gap:16px;padding:16px 20px;border-top:1px solid #d5dfe3;color:#60747a;font-size:12px}
+.session-pagination label,.session-pagination>div{display:flex;align-items:center;gap:10px}.session-pagination>div{margin-left:auto}.session-pagination select{border:1px solid #cbd7dd;border-radius:8px;padding:6px;background:transparent;color:inherit}.session-pagination button{padding:8px 12px;min-height:36px}.session-pagination button:disabled{opacity:.45;cursor:default}
+.session-empty{text-align:center;padding:28px!important;color:#60747a}
+.activity-session-dialog{width:min(780px,calc(100vw - 32px));max-height:90dvh;padding:0;border:1px solid #d5dfe3;border-radius:20px;background:#fff;color:#173449;box-shadow:0 24px 90px #102f4a45}
+.activity-session-dialog::backdrop{background:#10212d80;backdrop-filter:blur(3px)}
+.class-student-dialog{width:min(1180px,calc(100vw - 32px))}
+.class-student-dialog .report-table{overflow-x:auto}
+.class-student-dialog table{min-width:900px}
+.class-student-name{max-width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere;min-height:44px}
+.class-result-actions{display:flex;flex-wrap:wrap;gap:8px}
+.class-result-actions button{min-height:44px}
+.class-result-actions .class-result-delete{color:#a52738;border-color:#bf5967}
+html[data-theme="dark"] .class-result-actions .class-result-delete{color:#ffadb8;border-color:#bf7985}
+.activity-session-dialog[open]{display:flex;flex-direction:column;overflow:hidden}.activity-session-dialog .session-dialog-heading,.activity-session-dialog .session-dialog-footer{flex:none}.activity-session-dialog .session-dialog-content{flex:1;min-height:0;max-height:none}.activity-session-dialog .session-timeline li:before{left:-18px}
+.session-dialog-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:24px 28px;border-bottom:1px solid #e0e6e9}.session-dialog-heading .eyebrow{margin:0 0 8px;color:#288e93}.session-dialog-heading h2{font-size:24px;margin:0 0 8px}.session-dialog-heading p:last-child{margin:0;color:#60747a;font-size:14px;overflow-wrap:anywhere}
+.session-dialog-x{border:0;border-radius:8px;background:transparent;color:inherit;font-size:28px;line-height:1;min-width:40px;min-height:40px;cursor:pointer}.session-dialog-x:hover{background:#eaf0f3}
+.session-dialog-content{padding:24px 28px;max-height:calc(90dvh - 190px);overflow-y:auto}.session-dialog-content h3{margin:24px 0 8px;font-size:17px}
+.session-metadata{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:0;padding:22px;border:1px solid #dce3e7;border-radius:16px;background:#f7fafb}.session-metadata dt{font-size:12px;color:#60747a;margin-bottom:7px}.session-metadata dd{margin:0;font-size:14px;overflow-wrap:anywhere}
+.session-detail-tools{display:grid;grid-template-columns:1fr 180px;gap:16px;padding:18px;border:1px solid #dce3e7;border-radius:14px}.session-detail-tools label{display:grid;gap:7px;font-size:12px;color:#60747a}.session-detail-tools input,.session-detail-tools select{width:100%;min-height:42px;border:1px solid #bccdd5;border-radius:8px;padding:8px 10px;background:#fff;color:#173449;font:inherit;font-size:14px}
+.session-timeline{list-style:none;padding:0 0 0 20px;margin:18px 0 0;border-left:2px solid #dbe7e8;max-height:360px;overflow-y:auto}.session-timeline li{position:relative;display:grid;gap:5px;padding:0 8px 22px 0}.session-timeline li:before{content:"";position:absolute;left:-25px;top:5px;width:8px;height:8px;border-radius:50%;background:#288e93}.session-timeline strong{font-size:14px;overflow-wrap:anywhere}.session-timeline time,.session-timeline span{font-size:12px;color:#60747a}
+.session-dialog-footer{display:flex;justify-content:flex-end;padding:16px 28px;border-top:1px solid #e0e6e9;background:#f7fafb}
+html[data-theme="dark"] .session-status-note,html[data-theme="dark"] .session-pagination,html[data-theme="dark"] .session-empty{color:#abc0c8}
+html[data-theme="dark"] .session-view{color:#79cfcb}html[data-theme="dark"] .session-status{background:#2b3a44;color:#c0cbd3}html[data-theme="dark"] .status-active{background:#173f33;color:#92e0bf}html[data-theme="dark"] .status-idle{background:#463d24;color:#f2d686}html[data-theme="dark"] .status-logged-out{background:#24364b;color:#b6cbe8}
+html[data-theme="dark"] .activity-session-dialog{background:#17272f;color:#edf6f8;border-color:#49626d}html[data-theme="dark"] .session-metadata,html[data-theme="dark"] .session-dialog-footer{background:#1d3039;border-color:#3a525d}html[data-theme="dark"] .session-dialog-heading,html[data-theme="dark"] .session-detail-tools,html[data-theme="dark"] .session-pagination,html[data-theme="dark"] .session-timeline{border-color:#3a525d}html[data-theme="dark"] .session-detail-tools input,html[data-theme="dark"] .session-detail-tools select{background:#101e24;border-color:#49626d;color:#edf6f8;color-scheme:dark}html[data-theme="dark"] .session-metadata dt,html[data-theme="dark"] .session-timeline time,html[data-theme="dark"] .session-timeline span,html[data-theme="dark"] .session-detail-tools label,html[data-theme="dark"] .session-dialog-heading p:last-child{color:#abc0c8}
+@media(max-width:650px){.session-filters{grid-template-columns:1fr}.session-pagination>div{margin-left:0;width:100%;justify-content:space-between}.session-metadata{grid-template-columns:1fr}.session-detail-tools{grid-template-columns:1fr}.session-dialog-heading,.session-dialog-content{padding:20px}.session-dialog-footer{padding:14px 20px}.session-table table{min-width:660px}}

@@ -1,0 +1,13 @@
+{
+  "name": "sinagbasa-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite SINAGBASA/dist --port 8000 --open",
+    "build": "vite build SINAGBASA/dist --outDir ../../.build-check",
+    "preview": "vite preview SINAGBASA/dist --port 8000"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

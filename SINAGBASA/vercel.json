@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "outputDirectory": "dist",
+  "headers": [
+    { "source": "/", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/assessments.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/assessment-content.js", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}
